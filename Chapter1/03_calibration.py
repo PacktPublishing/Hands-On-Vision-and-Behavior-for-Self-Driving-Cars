@@ -15,6 +15,7 @@ row_2 = cv2.hconcat([black, white, black, white, black, white, black, white, bla
 
 board = cv2.vconcat([row_1, row_2, row_1, row_2, row_1, row_2, row_1, row_2])
 cv2.imwrite("out_calibration/calib_chess.png", board)
+show("chessboard", board)
 
 # Calibration parameters
 nX = 9
@@ -31,6 +32,7 @@ use_sub_pixels = True
 # Give calibration files to OpenCV
 for filename in os.listdir("in_calibration"):
     img_src = cv2.cvtColor(cv2.imread("in_calibration/" + filename), cv2.COLOR_BGR2GRAY)
+    img_copy = img_src.copy()
     found, corners = cv2.findChessboardCorners(img_src, (nY, nX), None)
 
     print(filename, ": ", found, img_src.shape)
@@ -44,6 +46,10 @@ for filename in os.listdir("in_calibration"):
         img_corners = cv2.drawChessboardCorners(img_src, (nY, nX), corners, True)
         cv2.imwrite("out_calibration/" + filename, img_corners)
         shape = img_src.shape
+
+        if "3685" in filename:
+            show("Calibration", [img_copy, img_corners])
+
 
 height, width = shape
 ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(object_points, image_points, shape[::-1], None, None)
