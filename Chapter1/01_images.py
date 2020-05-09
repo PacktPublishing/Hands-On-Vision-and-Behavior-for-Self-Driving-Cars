@@ -4,7 +4,7 @@ import time
 
 import sys
 sys.path.append('../')
-from utils import saveAndShow
+from utils import save_and_show
 
 # Load an image, in BGR
 image = cv2.imread('test.jpg', cv2.IMREAD_COLOR)
@@ -21,7 +21,7 @@ flipH = cv2.flip(image, 1)
 flipV = cv2.flip(image, 0)
 flip = cv2.flip(image, -1)
 
-saveAndShow("flip.jpg", [original, flipH, flipV, flip])
+save_and_show("flip.jpg", [original, flipH, flipV, flip])
 
 # Blur
 start = time.time()
@@ -39,7 +39,7 @@ print("Gaussian", time_gaussian-time_blur)
 print("Median", time_median-time_blur)
 print("Bilateral", time_bilateral-time_blur)
 
-saveAndShow("blur.jpg", [original, blurred, gaussian, median, bilateral])
+save_and_show("blur.jpg", [original, blurred, gaussian, median, bilateral])
 
 # Contrast, brightness, alpha
 more_contrast = image.copy()
@@ -53,11 +53,11 @@ cv2.convertScaleAbs(image, less_contrast, 0.5, 0)
 cv2.convertScaleAbs(image, more_brightness, 1, 64)
 cv2.convertScaleAbs(image, less_brightness, 1, -64)
 
-saveAndShow("cont_bright.jpg", [original, more_contrast, less_contrast, more_brightness, less_brightness])
+save_and_show("cont_bright.jpg", [original, more_contrast, less_contrast, more_brightness, less_brightness])
 
 
 # Apply Gamma=1.5 on the normalised image and then multiply by scaling constant (For 8 bit, c=255)
 higher_gamma = np.array(255 * (image / 255) ** (1 / 1.5), dtype='uint8')  # Gamma correction: 1.5
 # Apply Gamma=0.7
 lower_gamma = np.array(255 * (image / 255) ** (1 / 0.7), dtype='uint8')   # Gamma correction: 0.7
-saveAndShow("gamma.jpg", [original, higher_gamma, lower_gamma])
+save_and_show("gamma.jpg", [original, higher_gamma, lower_gamma])

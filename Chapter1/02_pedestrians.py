@@ -3,7 +3,7 @@ import time
 
 import sys
 sys.path.append('../')
-from utils import saveAndShow
+from utils import save_and_show
 
 # Prepare the hog detector to detect pedestrians
 hog = cv2.HOGDescriptor()
@@ -40,7 +40,7 @@ detect_pedestrians_hog("ped.jpg", 8, 1.2)
 
 def merge_pictures(res, files):
     images = [cv2.imread("out_hog/" + file) for file in files]
-    saveAndShow(res, images)
+    save_and_show(res, images)
 
 # Some interesting results
 merge_pictures("hog_ped.jpg", ["hog_2_1.05_H_0_1_ped.jpg", "hog_2_1.05_H_0_3_ped.jpg", "hog_2_1.05_H_0.2_1_ped.jpg"])
