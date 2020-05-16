@@ -3,6 +3,10 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 from copy import deepcopy
+
+import sys
+sys.path.append('../')
+
 from utils import set_save_files, save_dir, ensure_dir, get_save_files
 
 perspective_correction = None

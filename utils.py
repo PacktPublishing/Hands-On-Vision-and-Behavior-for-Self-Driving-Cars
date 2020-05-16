@@ -1,6 +1,7 @@
 import cv2
 import os
 import numpy as np
+import matplotlib.pyplot as plt
 
 save_files = True
 
@@ -60,3 +61,22 @@ def save_dir(img, prefix, filename, scale=1):
         cv2.imwrite(ensure_dir(filename) + "/" + prefix + filename, img if scale == 1 else np.uint8(scale * img))
 
     return img
+
+def show_history(history_object, plot_graph = True):
+    ### print the keys contained in the history object
+    print("Min Loss:", min(history_object.history['loss']))
+    print("Min Val Loss:", min(history_object.history['val_loss']))
+    print("Max Accuracy:", max(history_object.history['accuracy']))
+    print("Max Validation Accuracy:", max(history_object.history['val_accuracy']))
+
+    ### plot the training and validation loss for each epoch
+    if plot_graph:
+        plt.plot(history_object.history['loss'])
+        plt.plot(history_object.history['val_loss'])
+        plt.plot(history_object.history['accuracy'])
+        plt.plot(history_object.history['val_accuracy'])
+        plt.title('model mean squared error loss')
+        plt.ylabel('mean squared error loss')
+        plt.xlabel('epoch')
+        plt.legend(['T loss', 'V loss', 'T acc', 'V acc'], loc='upper left')
+        plt.show()
