@@ -39,6 +39,9 @@ def show(name, images):
 
 
 def save(name, images):
+    if not (os.path.isdir("out_images")):
+        os.mkdir("out_images")
+
     img = cv2.hconcat(images) if isinstance(images, list) else images
 
     cv2.imwrite("out_images/" + name, img)
@@ -63,9 +66,8 @@ def save_dir(img, prefix, filename, scale=1):
     return img
 
 def show_history(history_object, plot_graph = True):
-    ### print the keys contained in the history object
     print("Min Loss:", min(history_object.history['loss']))
-    print("Min Val Loss:", min(history_object.history['val_loss']))
+    print("Min Validation Loss:", min(history_object.history['val_loss']))
     print("Max Accuracy:", max(history_object.history['accuracy']))
     print("Max Validation Accuracy:", max(history_object.history['val_accuracy']))
 
@@ -80,3 +82,10 @@ def show_history(history_object, plot_graph = True):
         plt.xlabel('epoch')
         plt.legend(['T loss', 'V loss', 'T acc', 'V acc'], loc='upper left')
         plt.show()
+
+
+def rgb2gray(rgb):
+    return np.dot(rgb[...,:3], [0.299, 0.587, 0.114])
+
+def bgr2gray(bgr):
+    return np.dot(bgr[...,:3], [0.114, 0.587, 0.299])
