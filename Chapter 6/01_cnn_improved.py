@@ -18,6 +18,7 @@ from keras.preprocessing.image import ImageDataGenerator
 
 use_mnist = False
 
+# Customize the training
 name = "mnist" if use_mnist else "cifar10"
 batch_size = 16
 num_classes = 10
@@ -387,6 +388,7 @@ def create_model_bn_6_dropout():
 
     return model
 
+# Choose the model that you want to train
 model = create_model_bn_6_dropout()
 model.summary()
 opt = Adam()
