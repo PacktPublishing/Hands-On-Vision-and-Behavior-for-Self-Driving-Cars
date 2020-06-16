@@ -16,17 +16,18 @@ sys.path.append('../')
 from utils import show_history,save
 from keras.preprocessing.image import ImageDataGenerator
 
-use_mnist = False
+use_mnist = True
 
 # Customize the training
 name = "mnist" if use_mnist else "cifar10"
-batch_size = 16
+batch_size = 64
 num_classes = 10
 epochs = 250
 augment = True
 patience = 20
 
-datagen = ImageDataGenerator(rotation_range=15, width_shift_range=[-8, -4, 0, 4, 8], horizontal_flip=True, height_shift_range=[-5, 0, 5], zoom_range=[0.9, 1.1])
+datagen = ImageDataGenerator(rotation_range=15, width_shift_range=[-5, 0, 5], horizontal_flip=True)
+#datagen = ImageDataGenerator(rotation_range=15, width_shift_range=[-8, -4, 0, 4, 8], horizontal_flip=True, height_shift_range=[-5, 0, 5], zoom_range=[0.9, 1.1])
 
 print("Dataset in use: ", name.upper())
 
