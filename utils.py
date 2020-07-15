@@ -83,9 +83,28 @@ def show_history(history_object, plot_graph = True):
         plt.legend(['T loss', 'V loss', 'T acc', 'V acc'], loc='upper left')
         plt.show()
 
+def show_history_regression(history_object, plot_graph = True):
+    print("Min Loss:", min(history_object.history['loss']))
+    print("Min Validation Loss:", min(history_object.history['val_loss']))
+    print("Max Cosine Proximity:", max(history_object.history['cosine_proximity']))
+    print("Max Validation Cosine Proximity:", max(history_object.history['val_cosine_proximity']))
+
+    ### plot the training and validation loss for each epoch
+    if plot_graph:
+        plt.plot(history_object.history['loss'])
+        plt.plot(history_object.history['val_loss'])
+        plt.plot(history_object.history['cosine_proximity'])
+        plt.plot(history_object.history['val_cosine_proximity'])
+        plt.title('model mean squared error loss')
+        plt.ylabel('mean squared error loss')
+        plt.xlabel('epoch')
+        plt.legend(['T loss', 'V loss', 'T cos', 'V cos'], loc='upper left')
+        plt.show()
+
 
 def rgb2gray(rgb):
     return np.dot(rgb[...,:3], [0.299, 0.587, 0.114])
 
-def bgr2gray(bgr):
-    return np.dot(bgr[...,:3], [0.114, 0.587, 0.299])
+def bgr2gray(rgb):
+    return np.dot(rgb[...,:3], [0.114, 0.587, 0.299])
+
