@@ -54,7 +54,7 @@ def visualize_single(model, conv_name, image, show_activations = True):
     plt.close()
 
 shape = (66, 200)
-files = find_files("visual/1.jpg")
+files = find_files("visual/00003048_LEFT_0.25_0.050000_0.000000_ORIG.jpg")
 
 
 images = []
