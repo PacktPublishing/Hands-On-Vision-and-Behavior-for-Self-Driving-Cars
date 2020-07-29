@@ -2,6 +2,7 @@ import cv2
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+import glob
 
 save_files = True
 
@@ -108,3 +109,27 @@ def rgb2gray(rgb):
 def bgr2gray(rgb):
     return np.dot(rgb[...,:3], [0.114, 0.587, 0.299])
 
+def find_files(pattern):
+    files = []
+    for file_name in glob.iglob(pattern, recursive=True):
+        files.append(file_name)
+
+    return files
+
+def double_shuffle(images, labels):
+    assert len(images) == len(labels)
+    use_np = hasattr(images, 'shape')
+
+    if use_np:
+        indices = np.arange(images.shape[0])
+        np.random.shuffle(indices)
+        return (images[indices], labels[indices])
+
+    indexes = np.random.permutation(len(images))
+
+    return [images[idx] for idx in indexes], [labels[idx] for idx in indexes]
+
+def shuffle(data):
+    indexes = np.random.permutation(len(data))
+
+    return [data[idx] for idx in indexes]

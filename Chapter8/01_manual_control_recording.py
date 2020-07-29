@@ -1014,10 +1014,10 @@ class CameraManager(object):
 
             # Save only one camera out of 3, to increase fluidity
             if (n == 0 and camera_name == "MAIN") or (n == 1 and camera_name == "LEFT") or (n == 2 and camera_name == "RIGHT"):
-                array = np.frombuffer(image.raw_data, dtype=np.dtype("uint8"))
-                array = np.reshape(array, (image.height, image.width, 4))
-                array = array[:, :, :3]
-                img = cv2.resize(array, (200, 133))
+                img = np.frombuffer(image.raw_data, dtype=np.dtype("uint8"))
+                img = np.reshape(img, (image.height, image.width, 4))
+                img = img[:, :, :3]
+                img = cv2.resize(img, (200, 133))
                 img = img[67:, :, :]
 
                 cv2.imwrite('_out/%08d_%s_%f_%f_%f.jpg' % (
