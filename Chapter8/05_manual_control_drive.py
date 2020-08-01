@@ -9,6 +9,8 @@
 # Allows controlling a vehicle with a keyboard. For a simpler and more
 # documented example, please take a look at tutorial.py.
 
+# File modified by Luca Venturi for Packt Publishing, to use a neural network for self-driving
+
 """
 Welcome to CARLA manual control.
 

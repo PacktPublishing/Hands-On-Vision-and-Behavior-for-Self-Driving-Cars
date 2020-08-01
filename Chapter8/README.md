@@ -3,7 +3,7 @@ Chapter 8 - Behavioral Cloning
 
 There is a dataset of labeled images in **dataset_in**.
 Optionally you can build your own dataset or augment the current dataset:
-- **01_manual_control_recording,py** can run as a client for Carla that allows you to record images from 3 cameras, when pressing 'r'. In its current form, it needs to run from the installation directory of Carla, in PythonAPI/examples
+- **01_manual_control_recording.py** can run as a client for Carla that allows you to record images from 3 cameras, when pressing 'r'. In its current form, it needs to run from the installation directory of Carla, in PythonAPI/examples
 - Remember to record not only correct driving, but also stints to "correct the position", where you go from the border toward the center
 - You might also need to record more than once the turns that you want the car to take
 
