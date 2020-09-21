@@ -8,14 +8,12 @@ import keras
 import cv2
 import numpy as np
 import os
-from keras_adamw import AdamW
-from keras.losses import categorical_crossentropy
 
 size = (160,160)
 out_size = (200,160)
 
 files=find_files("dataset_test/rgb_*")
-model = keras.models.load_model("fc_densenet.h5", custom_objects={'AdamW': AdamW()})
+model = keras.models.load_model("fc_densenet.h5")
 
 add_median = True
 add_alpha = True
