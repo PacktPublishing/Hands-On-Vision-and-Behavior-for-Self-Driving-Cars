@@ -10,7 +10,7 @@ There are some examples of output:
 
 In addition:
 - **02_fc_densenet.py** will train the neural network; please adjust the parameters (size, batch size, groups) according to yout hardware capabilities
-- **03_inferemce.py** will process the test dataset, saving the results in **dataset_out**
+- **03_inference.py** will process the test dataset, saving the results in **dataset_out**
 
 
 
