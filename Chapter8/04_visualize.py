@@ -2,11 +2,21 @@ import cv2
 import glob
 import numpy as np
 import keras
+import keras.models
 from vis.visualization import visualize_saliency, visualize_activation
-from vis.utils import utils
 from keras import activations
+import tempfile
+import os
 
 import matplotlib.pyplot as plt
+
+def update_model(model):
+    model_path = tempfile.gettempdir() + '/' + next(tempfile._get_candidate_names()) + '.h5'
+    try:
+        model.save(model_path)
+        return keras.models.load_model(model_path)
+    finally:
+        os.remove(model_path)
 
 
 def find_files(pattern):
@@ -40,12 +50,11 @@ def visualize_single(model, conv_name, image, show_activations = True):
             col_act.append(cv2.hconcat(row_act))
 
         plt.matshow(cv2.vconcat(col_act), cmap='viridis')
-        plt.show()
         plt.waitforbuttonpress()
         plt.close()
 
     conv_layer.activation = activations.linear
-    sal_model = utils.apply_modifications(act_model)
+    sal_model = update_model(act_model)
 
     grads = visualize_saliency(sal_model, idx_layer, filter_indices=None, seed_input=image)
     plt.matshow(image)
