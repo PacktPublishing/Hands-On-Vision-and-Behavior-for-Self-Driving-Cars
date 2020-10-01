@@ -37,7 +37,7 @@ print("Expected:", np.argmax(y_test))
 print("First prediction prob:", x_pred)
 print("First prediction:", np.argmax(x_pred))
 
-def display_conv(model, conv_name, num_predictions):
+def display_conv(model, conv_name, num_predictions, description):
     from keras import models
 
     conv_layer = next(x.output for x in model.layers if x.output.name.startswith(conv_name))
@@ -57,18 +57,14 @@ def display_conv(model, conv_name, num_predictions):
         col_act.append(cv2.hconcat(row_act))
 
     plt.matshow(cv2.vconcat(col_act), cmap='viridis')
-    plt.show()
+    plt.title(description)
+    plt.waitforbuttonpress()
+    plt.close()
 
-display_conv(model, "conv2d_1/", 10)
-plt.waitforbuttonpress()
-plt.close()
-display_conv(model, "max_pooling2d_1", 10)
-plt.waitforbuttonpress()
-plt.close()
-display_conv(model, "conv2d_2/", 10)
-plt.waitforbuttonpress()
-plt.close()
-display_conv(model, "max_pooling2d_2", 10)
+display_conv(model, "conv2d_1/", 10, "Conv layer 1 activations")
+display_conv(model, "max_pooling2d_1", 10, "Max pooling 1 activations")
+display_conv(model, "conv2d_2/", 10, "Conv layer 2 activations")
+display_conv(model, "max_pooling2d_2", 10, "Max pooling 1 activations")
 
 
 

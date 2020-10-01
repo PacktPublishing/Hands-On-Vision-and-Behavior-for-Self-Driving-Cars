@@ -325,13 +325,13 @@ def detect_lanes(img_bgr, filename, left_lanes, right_lanes):
     img_hls = cv2.cvtColor(img_warped, cv2.COLOR_BGR2HLS).astype(np.float)
     img_edge = edge_detection(img_warped[:, :, 1], filename)
     (img_binary_combined, img_binary_solo) = threshold(img_hls[:, :, 1], img_edge, filename)
-    img_hist = histogram(img_binary_combined, "hist_", filename)
+    hist = histogram(img_binary_combined, "hist_", filename)
     histogram(img_binary_solo, "hist_solo_", filename)
 
     if (len(left_lanes) > MIN_DETECTIONS):
-        lanes = lanes_partial_histogram(img_hist, left_lanes, right_lanes, 30)
+        lanes = lanes_partial_histogram(hist, left_lanes, right_lanes, 30)
     else:
-        lanes = lanes_full_histogram(img_hist)
+        lanes = lanes_full_histogram(hist)
 
     ret, sw = slide_window(img_warped, img_binary_combined, lanes, 15, filename, prefix="window_")
 

@@ -1065,17 +1065,6 @@ def game_loop(args):
 
         model = keras.models.load_model("behave.h5")
 
-        import time
-        img_test = cv2.imread("test.jpg")
-        img_test = cv2.resize(img_test, (200, 133))
-        img_test = img_test[67:, :, :]
-        test_image_array = np.asarray(img_test)
-        start = time.time()
-        self_driving_steer = model.predict(test_image_array[None, :, :, :], batch_size=1)[0][0].astype(float)
-        end = time.time()
-        print("Initial, slow, prediction:", self_driving_steer, (end-start), " sec")
-
-
         while True:
             clock.tick_busy_loop(60)
             if controller.parse_events(client, world, clock):
