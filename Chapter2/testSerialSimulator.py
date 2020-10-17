@@ -30,13 +30,13 @@ def Example3():
     ser = serial.Serial()
     ser.baudrate = 9600
     ser.port = 0
-    print( ser )
+    print( f"Serial port information...\n    {ser}" )
 
     ser.open()
-    print( str( ser.isOpen() ) )
+    print( f"Serial port open = {str( ser.isOpen() )}" )
 
     ser.close()
-    print( ser.isOpen() )
+    print( f"Serial port open = {str( ser.isOpen() )}" )
 
 
 Example1()
