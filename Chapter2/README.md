@@ -2,6 +2,12 @@
 
 This code is used to show examples of how you would use PySerial to interact with an Arduino. It emulates the Arduino as a source to read from and also sends data to the emulated Arduino.
 
+## Setup your pipenv
+
+From the folder with the Pipfile run the command `pipenv update`
+
+If you don't have pipenv installed please follow the instructions at https://pypi.org/project/pipenv/
+
 ## Running the code
 
 The code can be run with the following command:
