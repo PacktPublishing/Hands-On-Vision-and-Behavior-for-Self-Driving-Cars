@@ -49,8 +49,6 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 ### Code in Action
 Click on the following link to see the Code in Action: [https://bit.ly/2FeZ5dQ](https://bit.ly/2FeZ5dQ)
 
-http://bit.ly/2puBGN1
-
 ### Related products
 * Learning OpenCV 4 Computer Vision with Python 3 - Third Edition [[Packt]](https://www.packtpub.com/product/learning-opencv-4-computer-vision-with-python-3-third-edition/9781789531619?utm_source=github&utm_medium=repository&utm_campaign=9781789531619) [[Amazon]](https://www.amazon.com/dp/1789531616)
 
