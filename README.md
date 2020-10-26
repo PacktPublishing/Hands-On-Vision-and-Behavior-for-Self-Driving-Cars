@@ -1,8 +1,8 @@
 # Hands-On Vision and Behavior for Self-Driving Cars
 
-<a href="https://www.packtpub.com/data/hands-on-vision-and-behavior-for-self-driving-cars?utm_source=github&utm_medium=repository&utm_campaign=9781786461629"><img src="" alt="Useful Links" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/data/hands-on-vision-and-behavior-for-self-driving-cars?utm_source=github&utm_medium=repository&utm_campaign=9781786461629"><img src="https://www.packtpub.com/media/catalog/product/cache/4cdce5a811acc0d2926d7f857dceb83b/9/7/9781800203587-original_62.jpeg" alt="Hands-On Vision and Behavior for Self-Driving Cars" height="256px" align="right"></a>
 
-This is the code repository for [Useful Links](https://www.packtpub.com/data/hands-on-vision-and-behavior-for-self-driving-cars?utm_source=github&utm_medium=repository&utm_campaign=9781786461629), published by Packt.
+This is the code repository for [Hands-On Vision and Behavior for Self-Driving Cars](https://www.packtpub.com/data/hands-on-vision-and-behavior-for-self-driving-cars?utm_source=github&utm_medium=repository&utm_campaign=9781786461629), published by Packt.
 
 **Explore visual perception, lane detection, and object classification with Python 3 and OpenCV 4**
 
@@ -46,7 +46,7 @@ With the following software and hardware list you can run all code files present
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781800203587_ColorImages.pdf).
 
-###Code in Action
+### Code in Action
 Click on the following link to see the Code in Action: [https://bit.ly/2FeZ5dQ](https://bit.ly/2FeZ5dQ)
 
 http://bit.ly/2puBGN1
