@@ -1,3 +1,8 @@
+## $5 Tech Unlocked 2021!
+[Buy and download this Book for only $5 on PacktPub.com](https://www.packtpub.com/product/hands-on-vision-and-behavior-for-self-driving-cars/9781800203587)
+-----
+*If you have read this book, please leave a review on [Amazon.com](https://www.amazon.com/gp/product/1800203586).     Potential readers can then use your unbiased opinion to help them make purchase decisions. Thank you. The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
+
 # Hands-On Vision and Behavior for Self-Driving Cars
 
 <a href="https://www.packtpub.com/data/hands-on-vision-and-behavior-for-self-driving-cars?utm_source=github&utm_medium=repository&utm_campaign=9781786461629"><img src="https://www.packtpub.com/media/catalog/product/cache/4cdce5a811acc0d2926d7f857dceb83b/9/7/9781800203587-original_62.jpeg" alt="Hands-On Vision and Behavior for Self-Driving Cars" height="256px" align="right"></a>
