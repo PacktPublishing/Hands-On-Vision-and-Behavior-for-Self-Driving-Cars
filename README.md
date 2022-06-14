@@ -1,7 +1,3 @@
-## [Get this title for $10 on Packt's Spring Sale](https://www.packt.com/B16322?utm_source=github&utm_medium=packt-github-repo&utm_campaign=spring_10_dollar_2022)
------
-For a limited period, all eBooks and Videos are only $10. All the practical content you need \- by developers, for developers
-
 # Hands-On Vision and Behavior for Self-Driving Cars
 
 <a href="https://www.packtpub.com/data/hands-on-vision-and-behavior-for-self-driving-cars?utm_source=github&utm_medium=repository&utm_campaign=9781786461629"><img src="https://www.packtpub.com/media/catalog/product/cache/4cdce5a811acc0d2926d7f857dceb83b/9/7/9781800203587-original_62.jpeg" alt="Hands-On Vision and Behavior for Self-Driving Cars" height="256px" align="right"></a>
