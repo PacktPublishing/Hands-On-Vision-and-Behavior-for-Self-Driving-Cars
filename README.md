@@ -60,3 +60,7 @@ has extensive experience as a programmer with world-class companies, including F
 
 **Krishtof Korda**
 grew up in a mountainside home over which the US Navy's Blue Angels flew during the Reno Air Races each year. A graduate from the University of Southern California and the USMC Officer Candidate School, he set the Marine Corps obstacle course record of 51 seconds. He took his love of aviation to the USAF, flying aboard the C-5M Super Galaxy as a flight test engineer for 5 years, and engineered installations of airborne experiments for the USAF Test Pilot School for 4 years. Later, he transitioned to designing sensor integrations for autonomous cars at Lyft Level 5. Now he works as an applications engineer for Ouster, integrating LIDAR sensors in the fields of robotics, AVs, drones, and mining, and loves racing Enduro mountain bikes.
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781800203587">https://packt.link/free-ebook/9781800203587 </a> </p>
